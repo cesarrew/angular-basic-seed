@@ -2,7 +2,7 @@
 
 A very simple seed that includes only the essential to start a project with Angular 2 and PrimeNG.
 
-Note: If you need a seed to a project that uses Java EE 7 on the back-end, use [`https://github.com/cesarrew/angular-wildfly-basic-seed`][https://github.com/cesarrew/angular-wildfly-basic-seed].
+Note: If you need a seed to a project that uses Java EE 7 on the back-end, use [https://github.com/cesarrew/angular-wildfly-basic-seed].
 
 ## Features
 
