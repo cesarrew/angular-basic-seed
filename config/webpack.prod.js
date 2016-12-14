@@ -13,7 +13,7 @@ module.exports = {
     },
 
     output: {
-        path: "../webapp",
+        path: "dist",
         filename: "[name].[hash].js",
         chunkFilename: "[id].[hash].chunk.js"
     },
