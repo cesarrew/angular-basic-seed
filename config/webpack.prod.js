@@ -24,11 +24,11 @@ module.exports = {
 
     module: {
         rules: [
-            { test: /\.ts$/, loader: "@ngtools/webpack" },
-            { test: /\.html$/, loader: "html-loader" },
-            { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)(\?.*$|$)/, loader: "file-loader?name=assets/[name].[hash].[ext]" },
-            { test: /\.css$/, exclude: ["src", "app"], loader: ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: "css-loader?sourceMap" }) },
-            { test: /\.css$/, include: ["src", "app"], loader: "raw-loader" }
+            { test: /\.ts$/, use: "@ngtools/webpack" },
+            { test: /\.html$/, use: "html-loader" },
+            { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)(\?.*$|$)/, use: "file-loader?name=assets/[name].[hash].[ext]" },
+            { test: /\.css$/, exclude: ["src", "app"], use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader?sourceMap" }) },
+            { test: /\.css$/, include: ["src", "app"], use: "raw-loader" }
         ]
     },
 
@@ -44,7 +44,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "src/index.html"
         }),
-        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false },
             sourceMap: true
