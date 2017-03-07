@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
@@ -26,8 +27,8 @@ module.exports = {
             { test: /\.ts$/, use: ["awesome-typescript-loader?transpileOnly=true", "angular2-template-loader"] },
             { test: /\.html$/, use: "html-loader" },
             { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|otf|ico)(\?.*$|$)/, use: "file-loader?name=assets/[name].[hash].[ext]" },
-            { test: /\.css$/, exclude: ["src", "app"], use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader?sourceMap" }) },
-            { test: /\.css$/, include: ["src", "app"], use: "raw-loader" }
+            { test: /\.css$/, exclude: path.resolve("src/app"), use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader?sourceMap" }) },
+            { test: /\.css$/, include: path.resolve("src/app"), use: "raw-loader" }
         ]
     },
 
