@@ -1,6 +1,6 @@
 # angular-basic-seed
 
-A very simple seed that includes only the essential to start a project with Angular 2 and PrimeNG.
+A very simple seed that includes only the essential to start a project with Angular and PrimeNG.
 
 Note: If you need a seed to a project that uses Java EE 7 on the back-end, use https://github.com/cesarrew/angular-wildfly-basic-seed.
 
@@ -13,7 +13,7 @@ Note: If you need a seed to a project that uses Java EE 7 on the back-end, use h
 
 ## Used tools and libraries
 
-- NPM, Webpack 2, TypeScript, Angular 2 and PrimeNG.
+- NPM, Webpack 2, TypeScript, Angular and PrimeNG.
 
 ## How to configure
 
@@ -21,7 +21,7 @@ Note: If you need a seed to a project that uses Java EE 7 on the back-end, use h
 
 ## How to start
 
-Note that NPM 3 or higher is required to build the project.
+Note that NPM 3 and NodeJS 6 or higher is required to build the project.
 
 ```bash
 # Installs all dependencies declared in package.json.
